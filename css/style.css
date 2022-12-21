@@ -19,7 +19,7 @@ body {
   align-items: center;
   grid-area: top-box;
   margin: 30px;
-  padding: 0 300px;
+  padding: 0 300px 0 260px;
   
 }
 .left-box{
