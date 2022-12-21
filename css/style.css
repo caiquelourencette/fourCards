@@ -1,0 +1,111 @@
+body {
+  display: grid;
+  font-family: Poppins, serif;
+  font-size: 15px;
+  background-color: hsl(0, 0%, 98%);
+  margin: 50px 150px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 30% 1fr 1fr;
+  grid-template-areas: 
+    'top-box top-box top-box'
+    'left-box mid-box1 right-box'
+    'left-box mid-box2 right-box';
+    gap: 25px;
+}
+.top-box{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  grid-area: top-box;
+  margin: 30px;
+  padding: 0 300px;
+  
+}
+.left-box{
+  grid-area: left-box;
+  background-color: #f7fafc;
+  border-top: solid 4px hsl(180, 62%, 55%);
+  border-radius: 1.5%;
+  margin-top: 150px;
+  box-shadow: 0 4px 20px 0 rgb(0, 0, 0, 0.2);
+  padding: 30px;
+  width: 300px;
+  height: 150px;
+}
+.mid-box1{
+  grid-area: mid-box1;
+  background-color: #f7fafc;
+  border-top: solid 4px hsl(0, 78%, 62%);
+  border-radius: 1.5%;
+  box-shadow: 0 4px 20px 0 rgb(0, 0, 0, 0.2);
+  padding: 30px;
+  width: 300px;
+  height: 150px;
+}
+.mid-box2{
+  grid-area: mid-box2;
+  background-color: #f7fafc;
+  border-top: solid 4px hsl(34, 97%, 64%);
+  border-radius: 1.5%;
+  box-shadow: 0 4px 20px 0 rgb(0, 0, 0, 0.2);
+  padding: 30px;
+  width: 300px;
+  height: 150px;
+}
+.right-box{
+  grid-area: right-box;
+  background-color: #f7fafc;
+  border-top: solid 4px hsl(212, 86%, 64%);
+  border-radius: 1.5%;
+  margin-top: 150px;
+  box-shadow: 0 4px 20px 0 rgb(0, 0, 0, 0.2);
+  padding: 30px;
+  width: 300px;
+  height: 150px;
+}
+h1, h2, h3{
+  margin: 0;
+}
+h2{
+  font-size: 2.0em;
+  font-weight: 200;
+}
+h1 {
+  margin-bottom: 15px;
+  font-size: 2.0em; 
+  font-weight: 600;
+}
+p{
+  color: hsl(0, 6%, 74%);
+}
+img{
+  float: right;
+}
+.top-box p {
+  margin: 0;
+}
+
+@media(max-width: 500px) {
+  body {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      'top-box'
+      'left-box'
+      'mid-box1'
+      'mid-box2'
+      'right-box';
+      margin: 50px;
+  }
+  .left-box, .right-box, .mid-box1, .mid-box2, .top-box {
+    margin: 0;
+  }
+  .top-box {
+    padding: 0px;
+  }
+  h2, h1 {
+    font-size: 1.5em;
+    margin: 0;
+  }
+}
